@@ -1,6 +1,7 @@
 package com.oubin.spring_cloud_alibaba.member.service;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberService {
     
     @GetMapping("/user")
-    public String getUser(String userId) {
-        return "2166xxxxx";
+    public String getUser(@RequestParam("userId") String userId) {
+        return userId;
     }
 }
