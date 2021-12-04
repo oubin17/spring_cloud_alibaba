@@ -15,6 +15,6 @@ public class MemberService {
     
     @GetMapping("/user")
     public String getUser(String userId) {
-        return "userName";
+        return "2166xxxxx";
     }
 }
