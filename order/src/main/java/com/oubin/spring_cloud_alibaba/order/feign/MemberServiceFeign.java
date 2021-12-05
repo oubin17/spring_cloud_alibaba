@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Author: oubin
  */
 @FeignClient("member")
-
 public interface MemberServiceFeign {
 
     @GetMapping("/user")

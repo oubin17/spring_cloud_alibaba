@@ -1,0 +1,21 @@
+server:
+  port: 8090
+spring:
+  application:
+    ## 服务名称
+    name: order
+  cloud:
+    nacos:
+      discovery:
+        ## nacos注册地址
+        server-addr: 127.0.0.1:8848
+      config:
+        # nacos分布式配置中心地址
+        server-addr: 127.0.0.1:8848
+        group: DEFAULT_GROUP
+        file-extension: properties
+
+# distribute config
+distribute:
+  config:
+    name: local-name
