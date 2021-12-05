@@ -1,0 +1,26 @@
+server:
+  port: 80
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      discovery:
+        locator:
+          #允许通过注册中心获取应用列表
+          enabled: true
+      # 路由策略
+      routes:
+        # 路由id
+        - id: member
+          # 转发
+#          uri: http://www.baidu.com
+          uri: lb://member
+          predicates:
+            - Path=/user/**
+#改属性表示要移除的路径，比如请求host:port/x1/x2，最后会变成host:port/x2
+#          filters:
+#            - StripPrefix=1

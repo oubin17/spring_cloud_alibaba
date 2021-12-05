@@ -17,6 +17,7 @@
     <modules>
         <module>../member</module>
         <module>../order</module>
+        <module>../gateway</module>
     </modules>
 
 </project>
